@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Merienda', cursive;
+}
+
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.white-box{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 1px;
+        border-bottom: 2px solid #fff;
+        left: 40%;
+        top: 19%;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 1px;
+        border-bottom: 2px solid #fff;
+        right: 40%;
+        top: 19%;
+    }
+}
+
+.black-box{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 1px;
+        border-bottom: 2px solid #000;
+        left: 40%;
+        top: 32%;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 1px;
+        border-bottom: 2px solid #000;
+        right: 40%;
+        top: 32%;
+    }
+}
+
+.menu {
+    padding: 30px 0 0 0;
+    display: flex;
+    list-style: none;
+    font-size: 12px;
+    li{
+        padding: 0 40px 0 0;
+    }
+    li:first-child{
+        position: relative;
+        &::before{
+            content: '';
+            background: url(../img/main/logo.svg) no-repeat;
+            position: absolute;
+            width: 40%;
+            height: 220%;
+            left: -32px;
+            top: -20px;
+        }
+    }
+    li:last-child{
+        padding: 0;
+    }
+    &__link {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.cofseeds{
+    width: 30px;
+}
+
+header{
+    background: url(../img/coffee/bg_2.png) no-repeat;
+    position: relative;
+    padding: 0 0 44px 0;
+    .menu-block {
+        padding: 0 0 111px 0;
+    }
+    
+    .header-block{
+        text-align: center;
+    }
+}
+
+.about {
+    margin: 70px 0 0 0;
+    &__block{
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__image {
+        flex: 0 1 50%;
+    }
+
+    &__content {
+        text-align: center;
+        flex: 0 1 40%;
+    }
+
+    &__title {
+        font-size: 24px;
+        color: #000;
+        margin: 0 0 20px 0;
+    }
+
+    &__img {
+        margin: 0 0 25.7px 0;
+
+    }
+
+    &__text {
+        font-size: 14px;
+        margin: 0 0 22px 0;
+    }
+
+    .about__box{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            border-bottom: 2px solid #000;
+            left: 20%;
+            top: 22%;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 1px;
+            border-bottom: 2px solid #000;
+            right: 20%;
+            top: 22%;
+        }
+    }
+}
+
+.line {
+    border-bottom: 1px solid #000;
+    width: 30%;
+    margin: 0 auto;
+    padding: 60px 0 0 0;
+}
+
+
+
+.footer {
+    &__menu {
+        margin: 0 0 20.7px 0;
+        text-align: center;
+        ul{
+            margin: 30px 0 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+        li:first-child{
+            position: relative;
+            &::before{
+                content: '';
+                background: url(../img/main/logo-black.svg) no-repeat;
+                position: absolute;
+                width: 100%;
+                height: 220%;
+                left: -32px;
+                top: -20px;
+            }
+        }
+        ul li a{
+            color: #000;
+        }
+    }
+}
+
+.choise {
+    padding: 60px 0 30px 0;
+    text-align: center;
+    &__form-block {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__filter {
+        margin: 0 81px 0 0;
+        span{
+            font-size: 14px;
+            margin: 0 19px 0 0;
+        }
+    }
+
+    &__filter-text {
+    }
+
+    &__filter-form {
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        padding: 6px 0 6px 36px;
+        color: rgba(0, 0, 0, 0.5);
+        border: none;
+        font-size: 12px;
+        transition: .5s;
+    }
+
+    &__filter-form:focus{
+        outline: none;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    &__button-block {
+    }
+
+    &__button-text {
+        font-size: 14px;
+        padding: 0 35px 0 0;
+    }
+
+    &__button {
+        background: #fff;
+        font-size: 12px;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 4px 0px 0px 4px;
+        border: none;
+        padding: 7px 20px 5px;
+        cursor: pointer;
+        transition: .5s;
+        &:last-child{
+            border-radius: 0 4px 4px 0;
+        }
+    }
+
+    &__button-none{
+        border-radius: 0;
+    }
+
+    &__button:hover{
+        background: rgb(175, 175, 175);
+    }
+
+    &__coffee-block {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 61px 0 0 0;
+    }
+
+    &__coffee-item {
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        width: 220px;
+        margin: 0 71px 60px 26px;
+        transition: .2s;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        img{
+            padding: 37px 0 14px 0;
+        }
+        &:hover{
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &__coffee-title {
+        font-size: 14px;
+        padding: 0 0 14px 0;
+    }
+
+    &__coffee-country {
+        text-align: right;
+        font-size: 14px;
+        padding: 0 27px 0 0;
+    }
+
+    &__coffee-price {
+        text-align: right;
+        padding: 14px 27px 22px 0;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    &__coffee-link{
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
